@@ -19,7 +19,7 @@ function clearOutput(){
 }
 function onRun(e){
     console.log("run")
-    lines=[null,...code.value.split("\n")]
+    lines=[...code.value.split("\n")]
     lines=lines.map(parseLine)
     lines=lines.map(e=>e.value=eval(e.value))
 }
